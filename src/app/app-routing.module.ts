@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ProductAddComponent } from './components/dashboard/product-add/product-add.component';
 import { ProductListComponent } from './components/dashboard/product-list/product-list.component';
+import { ProductUpdateComponent } from './components/dashboard/product-update/product-update.component';
 import { HomePageComponent } from './components/display/home-page/home-page.component';
 
 const routes: Routes = [
@@ -14,6 +15,8 @@ const routes: Routes = [
       { path: '', redirectTo: 'list', pathMatch: 'full' },
       { path: 'list', component: ProductListComponent },
       { path: 'add', component: ProductAddComponent },
+      // { path: ':id', component: ProductUpdateComponent },
+      { path: ':id/update', component: ProductUpdateComponent },
     ],
   },
 ];

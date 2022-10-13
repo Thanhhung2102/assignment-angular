@@ -13,6 +13,7 @@ import { HeaderComponent } from './components/display/header/header.component';
 import { FooterComponent } from './components/display/footer/footer.component';
 import { ProductListComponent } from './components/dashboard/product-list/product-list.component';
 import { ProductAddComponent } from './components/dashboard/product-add/product-add.component';
+import { ProductUpdateComponent } from './components/dashboard/product-update/product-update.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { ProductAddComponent } from './components/dashboard/product-add/product-
     FooterComponent,
     ProductListComponent,
     ProductAddComponent,
+    ProductUpdateComponent,
   ],
   imports: [
     BrowserModule,

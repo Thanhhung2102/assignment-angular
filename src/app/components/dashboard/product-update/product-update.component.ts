@@ -1,31 +1,32 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { IProduct } from 'src/app/models/product';
 import { ProductService } from 'src/app/services/product.service';
-import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 
 @Component({
-  selector: 'app-product-add',
-  templateUrl: './product-add.component.html',
-  styleUrls: ['./product-add.component.scss'],
+  selector: 'app-product-update',
+  templateUrl: './product-update.component.html',
+  styleUrls: ['./product-update.component.scss'],
 })
-export class ProductAddComponent implements OnInit {
-  product: IProduct = {
-    id: 0,
-    name: '',
-    img: '',
-    price: 0,
-    description: '',
-  };
+export class ProductUpdateComponent implements OnInit {
+  product!: IProduct;
   selectFile = '';
   constructor(
     private httpClient: HttpClient,
     private productService: ProductService,
-    private router: Router
+    private router: Router,
+    private ActivatedRoute: ActivatedRoute
   ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.ActivatedRoute.params.subscribe((param) => {
+      this.productService.getDetail(param['id']).subscribe((data) => {
+        this.product = data;
+      });
+    });
+  }
 
   changeFile(event: any) {
     this.selectFile = event.target.files[0];
@@ -39,12 +40,13 @@ export class ProductAddComponent implements OnInit {
         this.product.img = event.url;
       });
   }
-  onHandleAdd() {
-    this.productService.addProduct(this.product).subscribe(() => {
+
+  onHandleUpdate() {
+    this.productService.updateProduct(this.product).subscribe(() => {
       Swal.fire({
         position: 'center',
         icon: 'success',
-        title: 'Add product successful',
+        title: 'Update product successful',
         showConfirmButton: false,
         timer: 800,
       });

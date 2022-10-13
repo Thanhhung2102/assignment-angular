@@ -2,44 +2,44 @@
   "products": [
     {
       "id": 1,
-      "name": "Acis Gel Rocket 10",
+      "name": "Asics Gel Rocket 10",
       "img": "https://res.cloudinary.com/hungtt/image/upload/v1665472812/Gel_rocket_10_xrqdyg.png",
       "price": 1300000,
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua."
     },
     {
       "id": 2,
-      "name": "Acis Sky Elite FF Tokyo",
+      "name": "Asics Sky Elite FF Tokyo",
       "img": "https://res.cloudinary.com/hungtt/image/upload/v1665472813/tokyo_ff_mt_blrdim.png",
       "price": 2500000,
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua."
     },
     {
       "id": 3,
-      "name": "Acis Sky Elite FF Tokyo",
-      "img": "https://res.cloudinary.com/hungtt/image/upload/v1665472813/tokyo_ff_mt_blrdim.png",
-      "price": 2500000,
-      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua."
+      "name": "Asics Gel NetBurner MT 2",
+      "img": "http://res.cloudinary.com/hungtt/image/upload/v1665630501/mk4y1kmi7ibtsqewy0on.jpg",
+      "price": 3200000,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua"
     },
     {
       "id": 4,
-      "name": "Acis Sky Elite FF Tokyo",
-      "img": "https://res.cloudinary.com/hungtt/image/upload/v1665472813/tokyo_ff_mt_blrdim.png",
-      "price": 2500000,
-      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua."
+      "name": "Asics NetBurner FF MT 2",
+      "img": "http://res.cloudinary.com/hungtt/image/upload/v1665633580/ioupbhduij3mqiebl2rr.png",
+      "price": 3000000,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua"
     },
     {
       "id": 5,
-      "name": "Acis Sky Elite FF Tokyo",
-      "img": "https://res.cloudinary.com/hungtt/image/upload/v1665472813/tokyo_ff_mt_blrdim.png",
-      "price": 2500000,
-      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua."
+      "name": "Acis Gel Netburner FF MT",
+      "img": "http://res.cloudinary.com/hungtt/image/upload/v1665633618/fva0mppnxdynvt8gpman.png",
+      "price": 2600000,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua"
     },
     {
       "id": 6,
-      "name": "Acis Gel Netburner",
-      "img": "http://res.cloudinary.com/hungtt/image/upload/v1665630501/mk4y1kmi7ibtsqewy0on.jpg",
-      "price": 3000000,
+      "name": "Acis Gel Rocket 9",
+      "img": "http://res.cloudinary.com/hungtt/image/upload/v1665633645/rzpwrcri9mthacedlf5n.png",
+      "price": 1300000,
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua"
     }
   ]
