@@ -1,2 +1,9 @@
 <app-header-dashboard></app-header-dashboard>
-<app-sidebar-dashboard></app-sidebar-dashboard>
+<div class="flex">
+  <div class="w-[20%]">
+    <app-sidebar-dashboard></app-sidebar-dashboard>
+  </div>
+  <div class="w-[80%] mt-2">
+    <router-outlet></router-outlet>
+  </div>
+</div>
