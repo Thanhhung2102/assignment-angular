@@ -28,7 +28,7 @@
           <img src="{{ item.img }}" alt="" class="w-[40%] mx-auto" />
         </td>
         <td class="py-4 px-6 text-gray-900 font-medium">
-          {{ item.price | currency: "VND" }}
+          {{ item.price | currency: "VND":"" }}đ
         </td>
         <td class="py-4 px-6 text-gray-900">{{ item.description }}</td>
         <td class="py-4 px-6">

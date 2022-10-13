@@ -60,65 +60,12 @@
   Latest Products
 </h2>
 <div class="max-w-7xl mx-auto grid grid-cols-3 gap-5 text-center">
-  <div class="product p-10">
-    <img
-      src="https://res.cloudinary.com/hungtt/image/upload/v1665472813/tokyo_ff_mt_blrdim.png"
-      alt=""
-    />
-    <a href="#" class="text-[#001E63] font-medium hover:underline"
-      >Acis GEL Elite FF MT 2</a
-    >
-    <p class="text-[#001E63]">3.500.000đ</p>
-  </div>
-  <div class="product p-10">
-    <img
-      src="https://res.cloudinary.com/hungtt/image/upload/v1665472813/tokyo_ff_mt_blrdim.png"
-      alt=""
-    />
-    <a href="#" class="text-[#001E63] font-medium hover:underline"
-      >Acis GEL Elite FF MT 2</a
-    >
-    <p class="text-[#001E63]">3.500.000đ</p>
-  </div>
-  <div class="product p-10">
-    <img
-      src="https://res.cloudinary.com/hungtt/image/upload/v1665472813/tokyo_ff_mt_blrdim.png"
-      alt=""
-    />
-    <a href="#" class="text-[#001E63] font-medium hover:underline"
-      >Acis GEL Elite FF MT 2</a
-    >
-    <p class="text-[#001E63]">3.500.000đ</p>
-  </div>
-  <div class="product p-10">
-    <img
-      src="https://res.cloudinary.com/hungtt/image/upload/v1665472813/tokyo_ff_mt_blrdim.png"
-      alt=""
-    />
-    <a href="#" class="text-[#001E63] font-medium hover:underline"
-      >Acis GEL Elite FF MT 2</a
-    >
-    <p class="text-[#001E63]">3.500.000đ</p>
-  </div>
-  <div class="product p-10">
-    <img
-      src="https://res.cloudinary.com/hungtt/image/upload/v1665472813/tokyo_ff_mt_blrdim.png"
-      alt=""
-    />
-    <a href="#" class="text-[#001E63] font-medium hover:underline"
-      >Acis GEL Elite FF MT 2</a
-    >
-    <p class="text-[#001E63]">3.500.000đ</p>
-  </div>
-  <div class="product p-10">
-    <img
-      src="https://res.cloudinary.com/hungtt/image/upload/v1665472813/tokyo_ff_mt_blrdim.png"
-      alt=""
-    />
-    <a href="#" class="text-[#001E63] font-medium hover:underline"
-      >Acis GEL Elite FF MT 2</a
-    >
-    <p class="text-[#001E63]">3.500.000đ</p>
+  <div class="product p-10" *ngFor="let item of products">
+    <img src="{{ item.img }}" alt="" />
+    <a href="#" class="text-[#001E63] font-medium hover:underline">{{
+      item.name
+    }}</a>
+    <p class="text-[#001E63]">{{ item.price | currency: "VND":"" }}đ</p>
   </div>
 </div>
 <div class="container my-24 px-6 mx-auto">
