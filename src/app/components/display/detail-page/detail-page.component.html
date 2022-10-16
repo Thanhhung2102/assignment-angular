@@ -1,8 +1,8 @@
 <app-header></app-header>
 <!-- component -->
 <section class="text-gray-700 body-font overflow-hidden bg-white">
-  <div class="container px-5 py-24 mx-auto">
-    <div class="lg:w-4/5 mx-auto flex flex-wrap">
+  <div class="container py-24 mx-auto">
+    <div class="max-w-7xl mx-auto flex flex-wrap">
       <img
         alt="ecommerce"
         class="lg:w-1/2 w-full object-cover object-center rounded border border-gray-200 p-[30px]"
@@ -204,27 +204,20 @@
     </div>
   </div>
 </section>
-<div>
-  <swiper
-    [slidesPerView]="3"
-    [spaceBetween]="10"
-    [navigation]="true"
-    [pagination]="{ clickable: true }"
+<h2 class="text-3xl text-[#001E63] font-medium max-w-7xl mx-auto">
+  Other products
+</h2>
+<div class="max-w-7xl mx-auto grid grid-cols-3 gap-3">
+  <div
+    class="product p-10 cursor-pointer text-center"
+    *ngFor="let item of categories.products"
   >
-    <!-- <ng-template swiperSlide>Slide 1</ng-template>
-    <ng-template swiperSlide>Slide 2</ng-template>
-    <ng-template swiperSlide>Slide 3</ng-template>
-    <ng-template swiperSlide>Slide 1</ng-template>
-    <ng-template swiperSlide>Slide 2</ng-template>
-    <ng-template swiperSlide>Slide 3</ng-template> -->
-    <ng-template class="product p-10" *ngFor="let item of products">
-      <img src="{{ item.img }}" alt="" />
-      <a
-        routerLink="/product/{{ item.id }}"
-        class="text-[#001E63] font-medium hover:underline"
-        >{{ item.name }}</a
-      >
-      <p class="text-[#001E63]">{{ item.price | currency: "VND":"" }}đ</p>
-    </ng-template>
-  </swiper>
+    <img src="{{ item.img }}" alt="" />
+    <a
+      routerLink="/product/{{ item.id }}"
+      class="text-[#001E63] font-medium hover:underline"
+      >{{ item.name }}</a
+    >
+    <p class="text-[#001E63]">{{ item.price | currency: "VND":"" }}đ</p>
+  </div>
 </div>

@@ -1,12 +1,9 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { ICategory } from 'src/app/models/category';
 import { IProduct } from 'src/app/models/product';
+import { CategoryService } from 'src/app/services/category.service';
 import { ProductService } from 'src/app/services/product.service';
-import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
-
-// install Swiper modules
-SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
-
 @Component({
   selector: 'app-detail-page',
   templateUrl: './detail-page.component.html',
@@ -15,10 +12,11 @@ SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 })
 export class DetailPageComponent implements OnInit {
   product!: IProduct;
-  products!: IProduct[];
+  categories!: any;
   constructor(
     private productService: ProductService,
-    private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
+    private categoryService: CategoryService
   ) {}
 
   ngOnInit(): void {
@@ -26,11 +24,13 @@ export class DetailPageComponent implements OnInit {
       console.log(param['id']);
       this.productService.getDetail(param['id']).subscribe((data) => {
         this.product = data;
+        this.categoryService
+          .showRelationship(this.product.categoryId)
+          .subscribe((item) => {
+            this.categories = item;
+            console.log(this.categories.products);
+          });
       });
-    });
-
-    this.productService.getProducts().subscribe((data) => {
-      this.products = data;
     });
   }
 }

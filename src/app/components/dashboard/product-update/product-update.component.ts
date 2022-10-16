@@ -1,7 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ICategory } from 'src/app/models/category';
 import { IProduct } from 'src/app/models/product';
+import { CategoryService } from 'src/app/services/category.service';
 import { ProductService } from 'src/app/services/product.service';
 import Swal from 'sweetalert2';
 
@@ -12,12 +14,14 @@ import Swal from 'sweetalert2';
 })
 export class ProductUpdateComponent implements OnInit {
   product!: IProduct;
+  categories!: ICategory[];
   selectFile = '';
   constructor(
     private httpClient: HttpClient,
     private productService: ProductService,
     private router: Router,
-    private ActivatedRoute: ActivatedRoute
+    private ActivatedRoute: ActivatedRoute,
+    private categoryService: CategoryService
   ) {}
 
   ngOnInit(): void {
@@ -25,6 +29,10 @@ export class ProductUpdateComponent implements OnInit {
       this.productService.getDetail(param['id']).subscribe((data) => {
         this.product = data;
       });
+    });
+
+    this.categoryService.getCategories().subscribe((cate) => {
+      this.categories = cate;
     });
   }
 

@@ -4,6 +4,8 @@ import { IProduct } from 'src/app/models/product';
 import { ProductService } from 'src/app/services/product.service';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
+import { CategoryService } from 'src/app/services/category.service';
+import { ICategory } from 'src/app/models/category';
 
 @Component({
   selector: 'app-product-add',
@@ -17,15 +19,22 @@ export class ProductAddComponent implements OnInit {
     img: '',
     price: 0,
     description: '',
+    categoryId: 0,
   };
+  categories!: ICategory[];
   selectFile = '';
   constructor(
     private httpClient: HttpClient,
     private productService: ProductService,
-    private router: Router
+    private router: Router,
+    private categoryService: CategoryService
   ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.categoryService.getCategories().subscribe((data) => {
+      this.categories = data;
+    });
+  }
 
   changeFile(event: any) {
     this.selectFile = event.target.files[0];

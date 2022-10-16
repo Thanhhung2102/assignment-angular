@@ -18,6 +18,9 @@ import { ProductUpdateComponent } from './components/dashboard/product-update/pr
 import { LoginComponent } from './components/auth/login/login.component';
 import { RegisterComponent } from './components/auth/register/register.component';
 import { DetailPageComponent } from './components/display/detail-page/detail-page.component';
+import { CategoryListComponent } from './components/dashboard/category/category-list/category-list.component';
+import { CategoryAddComponent } from './components/dashboard/category/category-add/category-add.component';
+import { CategoryUpdateComponent } from './components/dashboard/category/category-update/category-update.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +37,9 @@ import { DetailPageComponent } from './components/display/detail-page/detail-pag
     LoginComponent,
     RegisterComponent,
     DetailPageComponent,
+    CategoryListComponent,
+    CategoryAddComponent,
+    CategoryUpdateComponent,
   ],
   imports: [
     BrowserModule,
