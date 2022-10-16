@@ -1,10 +1,12 @@
 <header class="flex justify-center items-center mt-4 max-w-7xl mx-auto">
-  <div class="flex items-center space-x-14 w-[80%]">
-    <img
-      src="https://res.cloudinary.com/hungtt/image/upload/v1665450008/Asics_logo_qk6nw3.png"
-      alt=""
-      class="w-[20%]"
-    />
+  <div class="flex items-center w-[70%]">
+    <a routerLink="">
+      <img
+        src="https://res.cloudinary.com/hungtt/image/upload/v1665450008/Asics_logo_qk6nw3.png"
+        alt=""
+        class="w-[30%]"
+      />
+    </a>
     <ul class="flex space-x-6 text-[#001E63] font-bold">
       <li><a href="#">Home</a></li>
       <li><a href="#">Products</a></li>
@@ -12,7 +14,7 @@
       <li><a href="#">Contact</a></li>
     </ul>
   </div>
-  <div class="flex items-center space-x-4 w-[20%]">
+  <div class="flex items-center ml-10 w-[20%]">
     <div class="relative">
       <input
         type="search"
@@ -37,5 +39,13 @@
         ></path>
       </svg>
     </div>
+  </div>
+  <div>
+    <a routerLink="/signin">
+      <img
+        src="data:image/png;base64,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"
+        class="w-[65%] mx-auto"
+      />
+    </a>
   </div>
 </header>

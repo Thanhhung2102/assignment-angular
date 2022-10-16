@@ -25,4 +25,7 @@ export class ProductService {
   updateProduct(product: IProduct): Observable<IProduct> {
     return this.httpClient.put<IProduct>(`${this.API}/${product.id}`, product);
   }
+  showHomePage(): Observable<IProduct[]> {
+    return this.httpClient.get<IProduct[]>(`${this.API}?_limit=6`);
+  }
 }

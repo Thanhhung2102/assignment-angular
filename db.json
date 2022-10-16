@@ -42,5 +42,28 @@
       "price": 1300000,
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua"
     }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "email": "admin@gmail.com",
+      "password": "12345",
+      "phone": "034596851",
+      "role": 1
+    },
+    {
+      "id": 2,
+      "email": "user1@gmail.com",
+      "password": "12345",
+      "phone": "0322456978",
+      "role": 0
+    },
+    {
+      "email": "user2@gmail.com",
+      "password": "hung12345",
+      "phone": "0985672187",
+      "role": 0,
+      "id": 3
+    }
   ]
 }

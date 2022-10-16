@@ -1,6 +1,7 @@
 import { NgModule, LOCALE_ID } from '@angular/core';
+import { SwiperModule } from 'swiper/angular';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
@@ -14,6 +15,9 @@ import { FooterComponent } from './components/display/footer/footer.component';
 import { ProductListComponent } from './components/dashboard/product-list/product-list.component';
 import { ProductAddComponent } from './components/dashboard/product-add/product-add.component';
 import { ProductUpdateComponent } from './components/dashboard/product-update/product-update.component';
+import { LoginComponent } from './components/auth/login/login.component';
+import { RegisterComponent } from './components/auth/register/register.component';
+import { DetailPageComponent } from './components/display/detail-page/detail-page.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +31,9 @@ import { ProductUpdateComponent } from './components/dashboard/product-update/pr
     ProductListComponent,
     ProductAddComponent,
     ProductUpdateComponent,
+    LoginComponent,
+    RegisterComponent,
+    DetailPageComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,6 +41,8 @@ import { ProductUpdateComponent } from './components/dashboard/product-update/pr
     FormsModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    ReactiveFormsModule,
+    SwiperModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
