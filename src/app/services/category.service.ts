@@ -27,7 +27,7 @@ export class CategoryService {
       category
     );
   }
-  showRelationship(id: Number): Observable<ICategory[]> {
+  showRelationship(id: number): Observable<ICategory[]> {
     return this.httpClient.get<ICategory[]>(
       `${this.API}/${id}?_embed=products`
     );

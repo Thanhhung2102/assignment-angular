@@ -47,14 +47,6 @@
       "price": 1300000,
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua",
       "categoryId": 1
-    },
-    {
-      "id": 7,
-      "name": "Acis Netburner MT 2",
-      "img": "http://res.cloudinary.com/hungtt/image/upload/v1665914668/cyn6fxn0nk4quvneb21v.jpg",
-      "price": 2200000,
-      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua",
-      "categoryId": "2"
     }
   ],
   "categories": [
@@ -73,25 +65,36 @@
   ],
   "users": [
     {
-      "id": 1,
       "email": "admin@gmail.com",
-      "password": "12345",
-      "phone": "034596851",
-      "role": 1
+      "password": "$2a$10$el/.OCcr4jEhUzrMdHdtwe0qPY.APsdOZAxMOq2AFMDMbGdfRKp9S",
+      "name": "Thanh Hung",
+      "phone": "0345968851",
+      "role": 1,
+      "id": 1
     },
     {
-      "id": 2,
-      "email": "user1@gmail.com",
-      "password": "12345",
-      "phone": "0322456978",
-      "role": 0
+      "email": "hungttph13998@fpt.edu.vn",
+      "password": "$2a$10$qL1vlpnmqBHScHbzWU3DjuvAQXhp2huvpXe6Y2ITRkxFQe1ne7uey",
+      "name": "Hung",
+      "phone": "0345678567",
+      "role": 0,
+      "id": 2
     },
     {
-      "email": "user2@gmail.com",
-      "password": "hung12345",
-      "phone": "0985672187",
+      "email": "hungtt@gmail.com",
+      "password": "$2a$10$0OESjEPZKkqjD0aJyCpj7eESlQevfswe.6S2b06DBL.lEIoxhSDPG",
+      "name": "Hung",
+      "phone": "0345968851",
       "role": 0,
       "id": 3
+    },
+    {
+      "email": "hungtt@fpt.edu.vn",
+      "password": "$2a$10$m5YHi0r/9ALM5LIOMTmsOuil9OD5C33MrWRaNU3XJgWVeOTsDzwF2",
+      "name": "Tran Thanh Hung",
+      "phone": "0345968543",
+      "role": 0,
+      "id": 4
     }
   ]
 }

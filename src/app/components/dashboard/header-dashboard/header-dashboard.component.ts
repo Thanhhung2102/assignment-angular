@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { IProduct } from 'src/app/models/product';
 import { ProductService } from 'src/app/services/product.service';
 
@@ -10,23 +11,12 @@ import { ProductService } from 'src/app/services/product.service';
 export class HeaderDashboardComponent implements OnInit {
   products!: IProduct[];
   filterValue: string = '';
-  constructor(private productService: ProductService) {}
+  constructor(private productService: ProductService, private router: Router) {}
 
-  ngOnInit(): void {
-    this.productService.getProducts().subscribe(
-      (data) => {
-        this.products = data;
-        console.log(this.products);
-      },
-      (error) => {
-        console.log(error);
-      }
-    );
-  }
-  filter() {
-    this.products = this.products.filter((item) =>
-      item.name.includes(this.filterValue)
-    );
-    console.log(this.products);
+  ngOnInit(): void {}
+
+  logout() {
+    localStorage.removeItem('user');
+    this.router.navigateByUrl('/');
   }
 }

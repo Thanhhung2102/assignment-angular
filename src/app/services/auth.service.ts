@@ -7,14 +7,14 @@ import { IUser } from '../models/user';
   providedIn: 'root',
 })
 export class AuthService {
-  API = `http://localhost:3000/users`;
+  API = ` http://localhost:3000`;
 
   constructor(private httpClient: HttpClient) {}
 
   signup(user: IUser): Observable<IUser[]> {
-    return this.httpClient.post<IUser[]>(`${this.API}`, user);
+    return this.httpClient.post<IUser[]>(`${this.API}/signup`, user);
   }
   signin(user: IUser): Observable<IUser> {
-    return this.httpClient.post<IUser>(`${this.API}`, user);
+    return this.httpClient.post<IUser>(`${this.API}/signin`, user);
   }
 }

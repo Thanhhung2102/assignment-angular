@@ -13,6 +13,7 @@ import Swal from 'sweetalert2';
 })
 export class RegisterComponent implements OnInit {
   user: IUser = {
+    name: '',
     email: '',
     password: '',
     phone: '',
