@@ -7,7 +7,7 @@ import { IUser } from '../models/user';
   providedIn: 'root',
 })
 export class AuthService {
-  API = ` http://localhost:3000`;
+  API = `https://json-server-smoky-eight.vercel.app/api`;
 
   constructor(private httpClient: HttpClient) {}
 
