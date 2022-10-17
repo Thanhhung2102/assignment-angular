@@ -1,0 +1,199 @@
+<app-header></app-header>
+<div class="background my-4 h-[650px]">
+  <!-- <img
+    src="https://res.cloudinary.com/hungtt/image/upload/v1665474031/file_wsudab.jpg"
+    alt=""
+    class="w-full"
+  /> -->
+  <swiper
+    [slidesPerView]="1"
+    [spaceBetween]="10"
+    [navigation]="true"
+    [pagination]="{ clickable: true }"
+  >
+    <ng-template swiperSlide
+      ><img
+        src="https://res.cloudinary.com/hungtt/image/upload/v1665473825/asics_homepage_desktop_thin_hero_blast_series_100122_kakyxr.jpg"
+        alt=""
+    /></ng-template>
+    <ng-template swiperSlide
+      ><img
+        src="https://res.cloudinary.com/hungtt/image/upload/v1665450248/file.ob_rupn2j.png"
+        alt=""
+    /></ng-template>
+    <ng-template swiperSlide
+      ><img
+        src="https://res.cloudinary.com/hungtt/image/upload/v1665474031/file_wsudab.jpg"
+        alt=""
+    /></ng-template>
+  </swiper>
+</div>
+<div class="flex items-center py-10 justify-center">
+  <!-- single features -->
+  <div class="single-features text-center px-8 border-r-[1px]">
+    <div class="f-icon w-[30%] mx-auto mb-2">
+      <img src="https://img.icons8.com/ios/50/000000/in-transit--v1.png" />
+    </div>
+    <div>
+      <p class="font-medium text-base mb-0">Free Delivery</p>
+      <p class="font-normal text-xs text-gray-400 mb-0">
+        Free Shipping on all order
+      </p>
+    </div>
+  </div>
+  <!-- single features -->
+  <div class="single-features text-center px-8 border-r-[1px]">
+    <div class="f-icon w-[30%] mx-auto mb-2">
+      <img src="https://img.icons8.com/ios/50/000000/left2.png" />
+    </div>
+    <div>
+      <p class="font-medium text-base mb-0">Free Delivery</p>
+      <p class="font-normal text-xs text-gray-400 mb-0">
+        Free Shipping on all order
+      </p>
+    </div>
+  </div>
+  <!-- single features -->
+  <div class="single-features text-center px-8 border-r-[1px]">
+    <div class="f-icon w-[30%] mx-auto mb-2">
+      <img src="https://img.icons8.com/ios/50/000000/customer-support.png" />
+    </div>
+    <div>
+      <p class="font-medium text-base mb-0">Free Delivery</p>
+      <p class="font-normal text-xs text-gray-400 mb-0">
+        Free Shipping on all order
+      </p>
+    </div>
+  </div>
+  <!-- single features -->
+  <div class="single-features text-center px-8 border-r-[1px]">
+    <div class="f-icon w-[30%] mx-auto mb-2">
+      <img src="https://img.icons8.com/ios/50/000000/card-security.png" />
+    </div>
+    <div>
+      <p class="font-medium text-base mb-0">Free Delivery</p>
+      <p class="font-normal text-xs text-gray-400 mb-0">
+        Free Shipping on all order
+      </p>
+    </div>
+  </div>
+</div>
+<h2 class="text-4xl font-medium text-center my-2 text-[#001E63]">
+  Latest Products
+</h2>
+<div class="max-w-7xl mx-auto grid grid-cols-3 gap-5 text-center">
+  <div class="product p-10" *ngFor="let item of products">
+    <img src="{{ item.img }}" alt="" />
+    <a
+      routerLink="/product/{{ item.id }}"
+      class="text-[#001E63] font-medium hover:underline"
+      >{{ item.name }}</a
+    >
+    <p class="text-[#001E63]">{{ item.price | currency: "VND":"" }}đ</p>
+  </div>
+</div>
+<div class="container my-24 px-6 mx-auto">
+  <!-- Section: Design Block -->
+  <section class="mb-32 text-gray-800 text-center">
+    <h2 class="text-3xl font-bold mb-12 text-center">Latest News</h2>
+
+    <div class="grid lg:grid-cols-3 gap-6 xl:gap-x-12">
+      <div class="mb-6 lg:mb-0">
+        <div>
+          <div
+            class="relative overflow-hidden bg-no-repeat bg-cover ripple shadow-lg rounded-lg mb-6 w-[465px] h-[400px]"
+            data-mdb-ripple="true"
+            data-mdb-ripple-color="light"
+          >
+            <img
+              src="https://res.cloudinary.com/hungtt/image/upload/v1665474666/s9yky0jztoot2afmk5a1_ikenmp.jpg"
+              class="w-full"
+              alt=""
+            />
+            <a href="#!">
+              <div
+                class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out"
+                style="background-color: rgba(251, 251, 251, 0.2)"
+              ></div>
+            </a>
+          </div>
+
+          <h5 class="text-lg font-bold mb-3">
+            Boskovic earns second World Championship MVP award
+          </h5>
+
+          <p class="text-gray-500">
+            Ut pretium ultricies dignissim. Sed sit amet mi eget urna placerat
+            vulputate. Ut vulputate est non quam dignissim elementum. Donec a
+            ullamcorper diam.
+          </p>
+        </div>
+      </div>
+
+      <div class="mb-6 lg:mb-0">
+        <div>
+          <div
+            class="relative overflow-hidden bg-no-repeat bg-cover ripple shadow-lg rounded-lg mb-6 w-[465px] h-[400px]"
+            data-mdb-ripple="true"
+            data-mdb-ripple-color="light"
+          >
+            <img
+              src="https://res.cloudinary.com/hungtt/image/upload/v1665474666/rjg8wkt42qhvokqlw5ff_dbeljf.jpg"
+              class="w-full"
+              alt=""
+            />
+            <a href="#!">
+              <div
+                class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out"
+                style="background-color: rgba(251, 251, 251, 0.2)"
+              ></div>
+            </a>
+          </div>
+
+          <h5 class="text-lg font-bold mb-3">
+            Serbia go for their second title, Brazil aim at their first
+          </h5>
+
+          <p class="text-gray-500">
+            Suspendisse in volutpat massa. Nulla facilisi. Sed aliquet diam
+            orci, nec ornare metus semper sed. Integer volutpat ornare erat sit
+            amet rutrum.
+          </p>
+        </div>
+      </div>
+
+      <div class="mb-0">
+        <div>
+          <div
+            class="relative overflow-hidden bg-no-repeat bg-cover ripple shadow-lg rounded-lg mb-6 w-[465px] h-[400px]"
+            data-mdb-ripple="true"
+            data-mdb-ripple-color="light"
+          >
+            <img
+              src="https://res.cloudinary.com/hungtt/image/upload/v1665474666/gshk3dqjxcfk8vaagafe_kl54rh.jpg"
+              class="w-full"
+              alt=""
+            />
+            <a href="#!">
+              <div
+                class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out"
+                style="background-color: rgba(251, 251, 251, 0.2)"
+              ></div>
+            </a>
+          </div>
+
+          <h5 class="text-lg font-bold mb-3">DHL Top Serves of Phase 2</h5>
+
+          <p class="text-gray-500">
+            Curabitur tristique, mi a mollis sagittis, metus felis mattis arcu,
+            non vehicula nisl dui quis diam. Mauris ut risus eget massa volutpat
+            feugiat. Donec.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Section: Design Block -->
+</div>
+<!-- Container for demo purpose -->
+<app-footer></app-footer>
