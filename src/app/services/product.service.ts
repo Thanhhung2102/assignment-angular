@@ -7,7 +7,7 @@ import { IProduct } from '../models/product';
   providedIn: 'root',
 })
 export class ProductService {
-  API = `https://json-server-smoky-eight.vercel.app/api/products`;
+  API = `https://jsonserver-nine.vercel.app/api/products`;
   constructor(private httpClient: HttpClient) {}
 
   getProducts(): Observable<IProduct[]> {
