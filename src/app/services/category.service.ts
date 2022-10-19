@@ -6,7 +6,7 @@ import { ICategory } from '../models/category';
   providedIn: 'root',
 })
 export class CategoryService {
-  API = `https://jsonserver-nine.vercel.app/api/categories`;
+  API = `http://localhost:8080/api/categories`;
   constructor(private httpClient: HttpClient) {}
 
   getCategories(): Observable<ICategory[]> {
