@@ -7,7 +7,7 @@ import { IUser } from '../models/user';
   providedIn: 'root',
 })
 export class AuthService {
-  API = `http://localhost:8080/api`;
+  API = `https://jsonserver-nine.vercel.app/api`;
 
   constructor(private httpClient: HttpClient) {}
 
