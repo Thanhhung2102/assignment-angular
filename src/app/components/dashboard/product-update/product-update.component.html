@@ -9,6 +9,7 @@
       id="name"
       name="{{ product.name }}"
       [(ngModel)]="product.name"
+      [ngModelOptions]="{ standalone: true }"
       class="bg-gray-50 border border-gray-300 text-gray-900 text-sm outline-none rounded-lg focus:border-blue-500 block w-full p-2.5"
     />
   </div>
