@@ -7,7 +7,7 @@ import { IUser } from '../models/user';
   providedIn: 'root',
 })
 export class AuthService {
-  API = `https://jsonserver-nine.vercel.app/api`;
+  API = `https://xdy485-8080.preview.csb.app/api`;
 
   constructor(private httpClient: HttpClient) {}
 
