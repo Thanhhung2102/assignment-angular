@@ -7,7 +7,7 @@ import { IProduct } from '../models/product';
   providedIn: 'root',
 })
 export class ProductService {
-  API = `https://xdy485-8080.preview.csb.app/api/products`;
+  API = `https://5l9l2c-8080.preview.csb.app/api/products`;
   constructor(private httpClient: HttpClient) {}
 
   getProducts(): Observable<IProduct[]> {
